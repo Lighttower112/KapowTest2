@@ -1,0 +1,7 @@
+#Hub Mapping
+#Mon Jul 03 10:42:11 CEST 2017
+cluster=Localhost
+managementConsoleUuid=51e51a6e-0b7f-4d29-9ac3-e095e2adcaa4
+type=mc
+labels=Localhost
+managementConsoleName=Management Console

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<object class="Snippet" serializationversion="0">
+  <prologue>
+    <saved-by-versions>
+      <version>10.1.0</version>
+    </saved-by-versions>
+    <referenced-types>
+      <type name="LinkedInInput"/>
+    </referenced-types>
+    <referenced-snippets/>
+    <typed-variables>
+      <typed-variable name="linkedInInput" type-name="LinkedInInput"/>
+    </typed-variables>
+    <global-variables/>
+    <parameters>
+      <parameter name="linkedInInput" type-name="LinkedInInput"/>
+    </parameters>
+    <return-variables/>
+    <store-in-database-variables/>
+    <device-mappings/>
+    <browser-engine>WEBKIT</browser-engine>
+  </prologue>
+  <property name="variables" class="Variables">
+    <object class="Variable" serializationversion="1">
+      <property name="name" class="String">linkedInInput</property>
+      <property name="parameter" class="Boolean">true</property>
+      <property name="initialAssignment" class="InitialVariableAssignment">
+        <property name="type" class="TypeReference" serializationversion="0">
+          <property name="typeName" class="String">LinkedInInput</property>
+        </property>
+        <property name="assignments" class="AttributeAssignments">
+          <property name="Email" class="AttributeAssignment">
+            <property name="attributeValue" class="String">linkedin2@nims.nl</property>
+            <property name="currentlyAssigned" class="Boolean">true</property>
+            <property name="lastKnownAttributeType" class="java.lang.Class">kapow.robot.plugin.common.domain.StringAttributeType</property>
+          </property>
+        </property>
+      </property>
+    </object>
+  </property>
+  <comment class="String"/>
+  <body class="Body">
+    <blockBeginStep class="BlockBeginStep" id="0"/>
+    <steps class="ArrayList">
+      <object class="Transition" serializationversion="3" id="1">
+        <property name="name" class="String">Load Page</property>
+        <property name="stepAction" class="LoadPage2">
+          <property name="urlProvider" class="kapow.robot.plugin.common.stepaction.urlprovider2.ValueURLProvider2">
+            <property name="URL" class="String">https://www.linkedin.com/uas/login?formSignIn=true&amp;amp;session_redirect=%2Fvoyager%2FloginRedirect.html</property>
+          </property>
+          <property name="waitCriteria" class="WaitCriteria">
+            <object class="HTMLElementFoundWaitCriterion">
+              <property name="finder" class="DefaultNamedElementUnawareDOMElementFinder" serializationversion="4">
+                <property name="frameRecursive" class="Boolean">true</property>
+                <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                  <property name="value" class="String">.html.body[0].div[0].div[2]</property>
+                </property>
+                <property name="attributeName" class="String" id="2">class</property>
+                <property name="attributeValue" class="kapow.robot.plugin.common.support.predicate.unary.string.FixedStringPredicate">
+                  <property name="text" class="String">lang-switcher</property>
+                </property>
+              </property>
+              <property name="htmlElementConditions" class="kapow.robot.plugin.common.support.stopping.HTMLElementConditions">
+                <property name="visible" class="Boolean">true</property>
+              </property>
+            </object>
+            <object class="HTMLElementFoundWaitCriterion">
+              <property name="finder" class="DefaultNamedElementUnawareDOMElementFinder" serializationversion="4">
+                <property name="frameRecursive" class="Boolean">true</property>
+                <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+                  <property name="value" class="String">.html.body[0].div[0].div[2].ul[0]</property>
+                </property>
+                <property name="attributeName" idref="2"/>
+                <property name="attributeValue" class="kapow.robot.plugin.common.support.predicate.unary.string.FixedStringPredicate">
+                  <property name="text" class="String">lang-list</property>
+                </property>
+              </property>
+              <property name="htmlElementConditions" class="kapow.robot.plugin.common.support.stopping.HTMLElementConditions">
+                <property name="visible" class="Boolean">true</property>
+              </property>
+            </object>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="24">
+            <property name="httpUserAgent" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String" id="3">Mozilla/5.0 (iPhone; CPU iPhone OS 7_0_2 like Mac OS X) AppleWebKit/537.51.1 (KHTML, like Gecko) Version/7.0 Mobile/11A501 Safari/9537.53</property>
+            </property>
+            <property name="language" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">en_US</property>
+            </property>
+            <property name="migrationNotes" class="kapow.robot.plugin.common.support.Text">
+              <property name="text" class="String">Default value changed for Browser to Emulate: Internet Explorer 8.0 on Windows 7 -&gt; Chrome 43.0 on Windows 7
+Default value changed for Output Page If Timeout: false -&gt; true</property>
+            </property>
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep" id="4"/>
+            <property name="changedProperties" class="java.util.HashSet">
+              <element class="String" id="5">httpUserAgent</element>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" class="Boolean" id="6">true</property>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="7">
+        <property name="name" class="String">Load Page</property>
+        <property name="stepAction" class="LoadPage2">
+          <property name="urlProvider" class="kapow.robot.plugin.common.stepaction.urlprovider2.ValueURLProvider2">
+            <property name="URL" class="String">https://www.linkedin.com/uas/login?session_redirect=%2Fvoyager%2FloginRedirect%2Ehtml&amp;amp;fromSignIn=true&amp;amp;trk=uno-reg-join-mobile-sign-in</property>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="24">
+            <property name="httpUserAgent" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" idref="3"/>
+            </property>
+            <property name="language" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">en_US</property>
+            </property>
+            <property name="migrationNotes" class="kapow.robot.plugin.common.support.Text">
+              <property name="text" class="String">Default value changed for Browser to Emulate: Internet Explorer 8.0 on Windows 7 -&gt; Chrome 43.0 on Windows 7
+Default value changed for Output Page If Timeout: false -&gt; true</property>
+            </property>
+            <property name="ancestorProvider" idref="4"/>
+            <property name="changedProperties" class="java.util.HashSet">
+              <element idref="5"/>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="8">
+        <property name="name" class="String">Enter Email</property>
+        <property name="stepAction" class="EnterText">
+          <property name="textExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">linkedInInput.Email</property>
+            </property>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="24">
+            <property name="language" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">en_US</property>
+            </property>
+            <property name="migrationNotes" class="kapow.robot.plugin.common.support.Text">
+              <property name="text" class="String">Default value changed for Browser to Emulate: Internet Explorer 8.0 on Windows 7 -&gt; Chrome 43.0 on Windows 7
+Default value changed for HTTP User Agent: null -&gt; kapow.robot.plugin.common.support.expression.stringexpr.PresetUserAgentStringExpression(userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36")
+Default value changed for Output Page If Timeout: false -&gt; true</property>
+            </property>
+            <property name="ancestorProvider" idref="4"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.input</property>
+            </property>
+            <property name="attributeName" class="String" id="9">id</property>
+            <property name="attributeValue" class="kapow.robot.plugin.common.support.predicate.unary.string.FixedStringPredicate">
+              <property name="text" class="String">session_key-login</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="10">
+        <property name="name" class="String">Enter Password</property>
+        <property name="stepAction" class="EnterPassword">
+          <property name="passwordExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+            <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+              <property name="name" class="String">linkedInInput.Password</property>
+            </property>
+          </property>
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="24">
+            <property name="language" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">en_US</property>
+            </property>
+            <property name="migrationNotes" class="kapow.robot.plugin.common.support.Text">
+              <property name="text" class="String">Default value changed for Browser to Emulate: Internet Explorer 8.0 on Windows 7 -&gt; Chrome 43.0 on Windows 7
+Default value changed for HTTP User Agent: null -&gt; kapow.robot.plugin.common.support.expression.stringexpr.PresetUserAgentStringExpression(userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.134 Safari/537.36")
+Default value changed for Output Page If Timeout: false -&gt; true</property>
+            </property>
+            <property name="ancestorProvider" idref="4"/>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.input</property>
+            </property>
+            <property name="attributeName" idref="9"/>
+            <property name="attributeValue" class="kapow.robot.plugin.common.support.predicate.unary.string.FixedStringPredicate">
+              <property name="text" class="String">session_password-login</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="Transition" serializationversion="3" id="11">
+        <property name="name" class="String">Click Sign In</property>
+        <property name="stepAction" class="Click" serializationversion="0">
+          <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="24">
+            <property name="credentialsProvider" class="com.kapowtech.net.UsernamePasswordCredentialsProvider">
+              <property name="usernameExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">linkedInInput.Email</property>
+                </property>
+              </property>
+              <property name="passwordExpression" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
+                <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
+                  <property name="name" class="String">linkedInInput.Password</property>
+                </property>
+              </property>
+            </property>
+            <property name="httpUserAgent" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" idref="3"/>
+            </property>
+            <property name="formatHandling" class="kapow.robot.plugin.common.support.browser2.LegacyFormatHandling"/>
+            <property name="migrationNotes" class="kapow.robot.plugin.common.support.Text">
+              <property name="text" class="String">Default value changed for Browser to Emulate: Internet Explorer 8.0 on Windows 7 -&gt; Chrome 43.0 on Windows 7
+Default value changed for Output Page If Timeout: false -&gt; true</property>
+            </property>
+            <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
+            <property name="changedProperties" class="java.util.HashSet">
+              <element class="String">formatHandling</element>
+              <element idref="5"/>
+              <element class="String">credentialsProvider</element>
+            </property>
+          </property>
+        </property>
+        <property name="elementFinders" class="ElementFinders">
+          <object class="DefaultNamedElementAwareDOMElementFinder" serializationversion="4">
+            <property name="nodePath" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
+              <property name="value" class="String">.*.input</property>
+            </property>
+            <property name="attributeName" idref="9"/>
+            <property name="attributeValue" class="kapow.robot.plugin.common.support.predicate.unary.string.FixedStringPredicate">
+              <property name="text" class="String">signin-submit</property>
+            </property>
+          </object>
+        </property>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="6"/>
+        <property name="changedProperties" class="java.util.HashSet">
+          <element class="String">name</element>
+        </property>
+      </object>
+    </steps>
+    <blockEndStep class="BlockEndStep" id="12"/>
+    <edges class="ArrayList">
+      <object class="TransitionEdge">
+        <from idref="0"/>
+        <to idref="1"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="1"/>
+        <to idref="7"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="7"/>
+        <to idref="8"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="8"/>
+        <to idref="10"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="10"/>
+        <to idref="11"/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="11"/>
+        <to idref="12"/>
+      </object>
+    </edges>
+  </body>
+</object>

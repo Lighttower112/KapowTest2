@@ -1,0 +1,7 @@
+#Hub Mapping
+#Mon Jul 03 10:48:58 CEST 2017
+cluster=Production
+managementConsoleUuid=51e51a6e-0b7f-4d29-9ac3-e095e2adcaa4
+type=mc
+labels=Production
+managementConsoleName=Management Console
