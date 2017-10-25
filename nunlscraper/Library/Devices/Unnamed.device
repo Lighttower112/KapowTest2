@@ -1,0 +1,7 @@
+#Hub Mapping
+#Wed Oct 25 14:03:22 CEST 2017
+cluster=test
+managementConsoleUuid=51e51a6e-0b7f-4d29-9ac3-e095e2adcaa4
+type=mc
+labels=test
+managementConsoleName=Management Console

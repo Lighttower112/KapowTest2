@@ -1,0 +1,5 @@
+#Database Mapping
+#Wed Oct 25 11:21:33 CEST 2017
+dbConnectionDisplayName=Development Database (Management Console)
+mapToDatabaseConfiguration=Development Database
+showWarnings=true
